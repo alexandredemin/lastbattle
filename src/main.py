@@ -1,15 +1,13 @@
 import pygame
-import sys
-
 pygame.init()
 screen = pygame.display.set_mode((640, 480))
-clock = pygame.time.Clock()
+pygame.display.set_caption("Hello Pygame Web")
 
-while True:
+running = True
+while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
-    screen.fill((0, 0, 30))
+            running = False
+
+    screen.fill((0, 128, 255))  # синий фон
     pygame.display.flip()
-    clock.tick(60)
