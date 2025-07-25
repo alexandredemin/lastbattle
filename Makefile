@@ -7,6 +7,7 @@ PORT=8000
 
 # Сборка проекта (запускает pygbag для сборки, без сервера)
 build:
+	mkdir -p src/build/web
 	python -m pygbag $(SRC_DIR)
 
 # Запуск простого HTTP-сервера для уже собранной версии

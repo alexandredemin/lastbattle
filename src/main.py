@@ -89,7 +89,6 @@ class Menu:
             y = start_y + idx * (surf.get_height() + self.spacing)
             self.surface.blit(surf, (x, y))
             self._item_rects.append(pygame.Rect(x, y, surf.get_width(), surf.get_height()))
-        pygame.display.flip()
 
     def handle_event(self, event):
         current = self.items[self.selected_index]
@@ -227,6 +226,7 @@ if __name__ == "__main__":
                     running = False
 
         menus[state].draw()
+        pygame.display.flip()
         clock.tick(30)
     pygame.quit()
 
