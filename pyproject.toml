@@ -1,0 +1,6 @@
+[build-system]
+requires = ["pygbag"]
+build-backend = "pygbag.build"
+
+[tool.pygbag]
+entry = "src/main.py"
